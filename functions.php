@@ -6,6 +6,7 @@
  * @subpackage lucasr
  */
 
+require_once( get_stylesheet_directory() . '/theme-options.php' );
 
 function lucasr_setup() {
     load_theme_textdomain( 'lucasr', get_template_directory() . '/languages' );

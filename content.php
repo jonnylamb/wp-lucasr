@@ -54,10 +54,13 @@
               <?php the_content(); ?>
             </div> <!-- .entry-content -->
 
+            <?php $lucasr_options = get_option( 'lucasr_options ') ?>
+            <?php if ( ! is_array( $lucasr_options ) || ! $lucasr_options['hide_discuss'] ) : ?>
             <div class="entry-discuss">
               <p><?php _e(' Got something to add? Find me on <a href="http://twitter.com/lucasratmundo" title="Tweet to @lucasratmundo">Twitter</a>
               and <a href="http://gplus.to/lucasr" title="Find me on Google+">Google+</a>' ); ?></p>
             </div> <!-- .entry-discuss -->
+            <?php endif; ?>
 
             <div class="entry-meta">
               <?php echo get_avatar( get_the_author_meta('ID'), 100 ); ?>
